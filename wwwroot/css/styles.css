@@ -203,3 +203,10 @@ header span {
 .contactHolder .form .button {
     width: 30%;
 }
+
+.accordion-flush .accordion-item {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
