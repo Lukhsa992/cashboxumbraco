@@ -1,0 +1,9 @@
+@inherits UmbracoViewPage<BlockListItem>
+
+@{
+    var row = (Button)Model.Content;
+}
+
+<button class="button" href="@row.Link">@row.Title</button>
+
+ 
