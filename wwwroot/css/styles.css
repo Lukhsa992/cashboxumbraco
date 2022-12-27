@@ -274,3 +274,8 @@ header span {
 .articleDate {
     text-align: right;
 }
+
+.headerContainer {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
