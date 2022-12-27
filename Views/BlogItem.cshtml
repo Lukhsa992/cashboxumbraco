@@ -1,0 +1,34 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "Master.cshtml";
+}
+
+@{
+    var image = Model.Url("thumbnailImage");
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <p>@(Model.Value("authorName"))</p>
+             
+        </div>
+        <div class="col-6 text-right ">
+                <p>@(Model.Value<DateTime>("publishedOn").ToString("MMMM dd,yyyy"))</p>   
+        </div>
+    
+    </div>
+    <div class="row">
+        <img src="@Model.Value("thumbnailImage.Url()")" alt="No image"></img>
+    </div>
+    <div class="row text-center">
+        <h1>@Model.Value("articleTitle")</h1>
+    </div>
+    <div class="row">
+            @Model.Value("articleText")
+    </div>
+    
+</div>
+</div>
