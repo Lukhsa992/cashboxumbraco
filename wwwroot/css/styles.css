@@ -260,3 +260,17 @@ header span {
     color: #FFC400;
     text-decoration: none;
 }
+
+.featuredImageRow {
+    height: 500px;
+}
+
+.featuredImage {
+    max-height: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}
+
+.articleDate {
+    text-align: right;
+}
