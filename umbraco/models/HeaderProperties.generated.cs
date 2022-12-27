@@ -22,6 +22,11 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 	/// <summary>Header Properties</summary>
 	public partial interface IHeaderProperties : IPublishedElement
 	{
+		/// <summary>Font color</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.0.0+d713b38")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string FontColor { get; }
+
 		/// <summary>Header Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.0.0+d713b38")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -83,6 +88,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Font color: Choose header font color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.0.0+d713b38")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("fontColor")]
+		public virtual string FontColor => GetFontColor(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Font color</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.0.0+d713b38")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetFontColor(IHeaderProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "fontColor");
 
 		///<summary>
 		/// Header Image: Choose the header image for this page

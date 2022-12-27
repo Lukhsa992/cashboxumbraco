@@ -73,6 +73,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual bool IsCardHolder => this.Value<bool>(_publishedValueFallback, "isCardHolder");
 
 		///<summary>
+		/// Left half css: Enter additional css classes for left half
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.0.0+d713b38")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("leftHalfCss")]
+		public virtual string LeftHalfCss => this.Value<string>(_publishedValueFallback, "leftHalfCss");
+
+		///<summary>
+		/// Right half css: Enter additional css classes for right half
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.0.0+d713b38")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("rightHalfCss")]
+		public virtual string RightHalfCss => this.Value<string>(_publishedValueFallback, "rightHalfCss");
+
+		///<summary>
 		/// Background color
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.0.0+d713b38")]

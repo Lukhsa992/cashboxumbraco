@@ -1,14 +1,26 @@
 @charset "UTF-8";
 @font-face {
-    font-family: Futo Sans;
-    src: url('./assets/fonts/futo-sans/FutoSans-Bold.ttf') format('truetype');
+    font-family: FutoSansBold;
+    src: url('../assets/fonts/FutoSans/FutoSans-Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: FutoSans;
+    src: url('../assets/fonts/FutoSans/FutoSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: FutoSansMedium;
+    src: url('../assets/fonts/FutoSans/FutoSans-Medium.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Roboto:wght@100;400;500;700;900&display=swap');
 body {
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 .card {
@@ -63,8 +75,18 @@ header {
     padding: 30px;
 }
 
+footer a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #FFC400;
+}
+
 .navbar {
-    background-color: #141728;
+    background-color: transparent;
     color: white;
 }
 
@@ -77,16 +99,14 @@ header {
 }
 
 header h1 {
-    font-family: 'Futo Sans';
-    font-weight: 700;
-    color: white;
+    font-family: 'FutoSansBold';
+    font-weight: 900;
     padding-bottom: 15px;
 }
 
 header span {
-    font-family: 'Futo Sans';
+    font-family: 'FutoSansMedium';
     font-weight: 500;
-    color: white;
 }
 
 .apps img {
@@ -209,4 +229,16 @@ header span {
     border-left: 0;
     border-radius: 12px;
     overflow: hidden;
+}
+
+.fa-stack {
+    color: transparent;
+}
+
+.fa-stack:hover {
+    color: #FFC400;
+}
+
+.is-fixed {
+    background-color: #141728;
 }

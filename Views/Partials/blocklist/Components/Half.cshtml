@@ -2,6 +2,7 @@
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
     var content = (ContentModels.Half)Model.Content;
+    
     string backgroundImage = content.BackgroundImage != null ? $"background-image: url('{content.BackgroundImage.Url()}')" : "";
     string backgroundColor = !string.IsNullOrWhiteSpace(content.BackgroundColor) ? $"background-color: #{content.BackgroundColor}" : "";
     string fontColor = !string.IsNullOrWhiteSpace(content.FontColor) ? $"color: #{content.FontColor}" : "";
