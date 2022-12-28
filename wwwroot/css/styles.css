@@ -183,6 +183,13 @@ header span {
     border-color: #FFC400;
     border-style: solid;
     width: 200px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    color: white;
 }
 
 .contactInfo img {

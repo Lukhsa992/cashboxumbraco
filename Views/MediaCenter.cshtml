@@ -11,11 +11,14 @@
     .ChildrenOfType("blogItem")
     .Where(x => x.IsVisible())
     .OrderByDescending(x => x.CreateDate);
+	int news = 0;
 }
 <div class="container">
 <div class="row my-5">
+	
 	@foreach (var item in selection)
 	{   
+		if(news > 3) break;
 		var thumbnail = item.Value<IPublishedContent>("thumbnailImage");
 	    <div class="col-6">
 		<img class="thumbnailImage my-4" src="@thumbnail.Url()" alt="No featured image"> </img>	
@@ -28,8 +31,8 @@
 		<p>
 			@item.Value("introText")
 		</p>
-		
 		</div>
+		news++;
 	}
 
 </div>

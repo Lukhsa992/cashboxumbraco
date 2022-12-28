@@ -12,12 +12,28 @@
     .Where(x => x.IsVisible())
     .OrderByDescending(x => x.CreateDate);
 }
-<ul>
+<div class="container">
+<div class="row my-5">
 	@foreach (var item in selection)
-	{
-		<li>
+	{   
+		var thumbnail = item.Value<IPublishedContent>("thumbnailImage");
+	    <div class="col-6">
+		<img class="thumbnailImage my-4" src="@thumbnail.Url()" alt="No featured image"> </img>	
+		<h3 class="articleTitle my-4">
 			<a href="@item.Url()">@item.Name()</a>
-		</li>
+		</h3>
+		  <p class="my-3">
+			@item.Value("publishedOn")
+		</p>
+		<p>
+			@item.Value("introText")
+		</p>
+		
+		</div>
 	}
-</ul>
+
+</div>
+</div>
+
+
 
